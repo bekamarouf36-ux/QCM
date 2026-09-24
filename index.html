@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Résidanat Pro — 1360 QCM/QCS · 320 cas cliniques</title>
+<title>Résidanat Pro — 1 360 QCM/QCS · 340 cas cliniques</title>
 <style>
 :root{
   --nav:#0d2940;--blue:#137aa8;--cyan:#45b9df;--bg:#eef3f7;
@@ -185,9 +185,129 @@ img,video,iframe{max-width:100%}
   .qbox .row.between .btn{width:100%;flex-basis:auto}
 }
 .caseScenario{margin:16px 0}.caseScenario p{line-height:1.65}.caseOpts{margin:12px 0}.caseOpts .option{display:block;margin:7px 0}
+
+/* ===== PREMIUM 2026 UI ===== */
+:root{
+  --nav:#071a2a; --nav2:#0b2e47; --blue:#1677ff; --blue2:#0ea5e9; --cyan:#67e8f9;
+  --bg:#f4f7fb; --card:#ffffff; --ink:#102236; --muted:#6b7d90; --line:#e5ebf2;
+  --green:#0f9f68; --red:#e04f5f; --orange:#d8891f;
+  --shadow:0 14px 40px rgba(15,35,60,.08); --shadow2:0 8px 24px rgba(15,35,60,.10);
+}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 8% 2%, rgba(14,165,233,.09), transparent 24rem),
+    radial-gradient(circle at 90% 5%, rgba(22,119,255,.07), transparent 25rem),
+    var(--bg);
+  color:var(--ink);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  letter-spacing:-.01em;
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.18),transparent 35%);z-index:-1}
+.top{
+  min-height:72px;padding:12px 22px;border-bottom:1px solid rgba(255,255,255,.07);
+  background:linear-gradient(120deg,var(--nav),var(--nav2));
+  box-shadow:0 6px 24px rgba(0,0,0,.14);backdrop-filter:blur(14px);
+}
+.brand{font-size:15px;display:flex;align-items:center;gap:8px;text-shadow:0 2px 8px rgba(0,0,0,.2)}
+.brand:before{content:"✦";display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,var(--blue2),var(--blue));box-shadow:0 6px 18px rgba(14,165,233,.28)}
+.brand span{color:#7dd3fc}
+.pill{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:999px;padding:8px 12px;font-size:12px;box-shadow:inset 0 1px rgba(255,255,255,.08)}
+.layout{grid-template-columns:272px minmax(0,1fr)}
+aside{background:rgba(255,255,255,.78);backdrop-filter:blur(12px);border-right:1px solid rgba(229,235,242,.9);padding:18px 14px;box-shadow:10px 0 30px rgba(15,35,60,.03)}
+aside button{position:relative;display:flex;align-items:center;gap:10px;padding:13px 14px;margin:4px 0;border-radius:13px;color:#496074;font-size:14px;transition:transform .18s ease,background .18s ease,color .18s ease,box-shadow .18s ease}
+aside button:hover{background:#edf6ff;color:#1262bb;transform:translateX(2px)}
+aside button.active{background:linear-gradient(135deg,#e8f4ff,#f3fbff);color:#0b64c0;box-shadow:inset 3px 0 0 var(--blue),0 8px 18px rgba(22,119,255,.07)}
+aside button.active:after{content:"";margin-left:auto;width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(22,119,255,.08)}
+main{max-width:1440px;padding:30px clamp(14px,3vw,34px) 60px}
+.view{animation:pageIn .28s ease both}
+@keyframes pageIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.card{border:1px solid rgba(224,232,240,.9);border-radius:20px;padding:22px;box-shadow:var(--shadow);background:rgba(255,255,255,.92);backdrop-filter:blur(10px)}
+.card h2,.card h3{letter-spacing:-.03em}
+.card h2{font-size:22px;margin-top:0}.card h3{font-size:17px}
+.hero{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.13);background:linear-gradient(135deg,#081d30 0%,#0d4d70 50%,#0785bb 100%);box-shadow:0 24px 55px rgba(8,29,48,.18);padding:34px}
+.hero:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-90px;top:-110px;background:radial-gradient(circle,rgba(103,232,249,.32),rgba(103,232,249,0) 70%);pointer-events:none}
+.hero:before{content:"";position:absolute;width:200px;height:200px;border-radius:50%;left:35%;bottom:-140px;background:rgba(22,119,255,.18);filter:blur(10px)}
+.hero h1{position:relative;z-index:1;font-weight:950;letter-spacing:-.045em;font-size:clamp(28px,4vw,42px)}
+.hero p{position:relative;z-index:1;max-width:800px;line-height:1.65;color:#d8effa}.hero .btn{position:relative;z-index:1}
+.btn{border-radius:12px;padding:11px 16px;min-height:44px;background:linear-gradient(135deg,#1677ff,#1263d1);box-shadow:0 8px 18px rgba(22,119,255,.2);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(22,119,255,.28);filter:brightness(1.03)}
+.btn.light{background:#f3f7fb;border:1px solid #e4ebf2;box-shadow:none;color:#35506b}.btn.light:hover{background:#eaf2f8}.btn.green{background:linear-gradient(135deg,#14a36f,#087c54)}.btn.red{background:linear-gradient(135deg,#e25768,#c73e50)}
+.grid{gap:18px}
+.grid>.card{transition:transform .2s ease,box-shadow .2s ease}.grid>.card:hover{transform:translateY(-3px);box-shadow:var(--shadow2)}
+.stat{font-weight:950;letter-spacing:-.04em}
+.mini{font-size:12px;color:#72859a}
+.hero .mini{color:#d8effa}
+.select{padding:13px 14px;border-radius:12px;border:1px solid #dce5ee;background:#fbfdff;box-shadow:0 4px 14px rgba(15,35,60,.035);outline:none;transition:border-color .18s ease,box-shadow .18s ease}
+.select:focus{border-color:#77b6ff;box-shadow:0 0 0 4px rgba(22,119,255,.09)}
+.course{position:relative;border:1px solid #e3eaf1;border-radius:16px;padding:18px;margin:10px 0;background:linear-gradient(180deg,#ffffff,#fbfdff);box-shadow:0 5px 16px rgba(15,35,60,.035);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.course:hover{transform:translateY(-2px);box-shadow:var(--shadow2);border-color:#cbdff1}
+.course h3{margin:0 0 5px}.badge{padding:6px 10px;border:1px solid #dbeaf2;background:#edf7fb}.badge.easy{background:#e9f9f0;border-color:#cdebd9}.badge.medium{background:#fff6e7;border-color:#f2dfb9}.badge.hard{background:#fff0f2;border-color:#f0cfd5}
+.progress{height:8px;background:#eaf0f5;border-radius:999px}.progress i{background:linear-gradient(90deg,#22a8e0,#1677ff);box-shadow:0 0 12px rgba(22,119,255,.28)}
+.bar{height:8px;background:#e9eef4;border-radius:999px}.bar i{background:linear-gradient(90deg,#39b6e7,#1677ff)}
+.examtop{top:72px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid #e4ebf2;box-shadow:0 8px 22px rgba(15,35,60,.05);padding:15px 0}
+.qnav{padding-bottom:3px}.qnum{border:1px solid #e1e9f0;border-radius:9px;background:#fff;color:#53687c;transition:all .15s ease}.qnum:hover{border-color:#9dc9ff;background:#f4f9ff}.qnum.current{outline:none;border-color:#1677ff;background:#eaf3ff;color:#0d63be;box-shadow:0 0 0 2px rgba(22,119,255,.13)}.qnum.done{background:#e9f8f0;color:#17704a;border-color:#cbe9d8}
+.qbox{margin-top:20px}.type{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#0b75a6}.stem{font-weight:850;letter-spacing:-.025em}.option{background:#fcfdff;border:1px solid #e2e9ef;box-shadow:0 2px 8px rgba(15,35,60,.025);transition:all .15s ease}.option:hover{background:#f4f9ff;border-color:#b9d8f5;transform:translateX(2px)}.option input{accent-color:var(--blue)}
+.answer{background:linear-gradient(180deg,#effaf4,#e8f6ef);border:1px solid #c7e7d4;box-shadow:0 6px 16px rgba(15,159,104,.06)}
+.warning{background:#fff8eb;border:1px solid #f1dfb9}.timer{padding:8px 12px;background:#fff1f3;border:1px solid #f1d4d8;border-radius:10px;color:#cb4454}
+.table-wrap table{border:1px solid #e6edf3;border-radius:14px;overflow:hidden}.table-wrap th{background:#f6f9fc;color:#4f647a;font-size:12px;text-transform:uppercase;letter-spacing:.05em}.table-wrap td{background:#fff}
+.caseScenario{margin:20px 0}.caseScenario .course{padding:22px;background:linear-gradient(135deg,#f9fcff,#f5fbff)}.caseScenario p{line-height:1.78;font-size:15px;color:#40566c}
+.caseOpts .option{margin:9px 0}
+#caseTitle{font-size:clamp(23px,3vw,32px);margin-bottom:6px}
+#caseProgress{display:inline-flex;background:#eef6ff;color:#1263b4;padding:6px 10px;border-radius:999px;border:1px solid #d7e8f8}
+.empty{padding:60px 20px}
+@media (max-width:900px){
+  aside{box-shadow:none}.examtop{top:122px}
+}
+@media (max-width:600px){
+  .top{min-height:60px;padding:9px 10px}.brand{font-size:0;max-width:none;white-space:nowrap}.brand:after{content:"RÉSIDANAT PRO";font-size:12px;font-weight:950;letter-spacing:.15px}.brand span{display:none}.brand:before{width:24px;height:24px;border-radius:8px}.top .row{gap:4px}
+  aside{top:60px;background:rgba(255,255,255,.94)} main{padding:13px 10px 34px}.hero{padding:24px 20px;border-radius:17px}.card{border-radius:16px;padding:16px}
+  .examtop{top:60px}.examtop .row.between{gap:8px}.timer{padding:6px 9px}.caseScenario p{font-size:14px}
+}
+
+
+/* ===== PREMIUM 2026 UI ===== */
+:root{--electric:#1677ff;--electric2:#27c2ff;--deep:#071a2a;--glass:rgba(255,255,255,.72);--soft:#edf5ff;--shadow-premium:0 22px 60px rgba(7,30,55,.10)}
+body{background:radial-gradient(circle at 12% 8%,rgba(36,181,255,.10),transparent 28rem),radial-gradient(circle at 88% 20%,rgba(87,106,255,.08),transparent 25rem),linear-gradient(180deg,#f6faff 0%,#eef4f9 48%,#f7fbff 100%);}
+body:after{content:"";position:fixed;inset:-20%;pointer-events:none;z-index:-2;background:conic-gradient(from 100deg at 50% 50%,transparent 0 35%,rgba(74,201,240,.06),transparent 55% 72%,rgba(86,97,255,.05),transparent 90%);filter:blur(30px);animation:ambientSpin 24s linear infinite}
+@keyframes ambientSpin{to{transform:rotate(360deg)}}
+.hero-premium{padding:0!important;min-height:500px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(340px,.75fr);min-height:500px}
+.hero-copy{padding:55px clamp(24px,5vw,64px);display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:950;letter-spacing:.16em;text-transform:uppercase;color:#78dfff;margin-bottom:15px}
+.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:#5ee7ff;box-shadow:0 0 0 5px rgba(94,231,255,.12),0 0 22px rgba(94,231,255,.55);animation:pulseDot 2s ease-in-out infinite}
+.muted-eyebrow{color:#7890a7;margin-bottom:4px}.muted-eyebrow:before{display:none}
+@keyframes pulseDot{50%{transform:scale(1.2);opacity:.65}}
+.hero-copy h1{max-width:780px;margin:0 0 17px;font-size:clamp(35px,5vw,63px)!important;line-height:.98!important;letter-spacing:-.055em!important}
+.hero-copy p{max-width:760px!important;font-size:16px!important;line-height:1.8!important;color:#d9effa!important;margin:0 0 24px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.hero-main-btn,.hero-ghost-btn{min-height:50px;padding:14px 18px}.hero-main-btn span{margin-left:18px;transition:transform .2s}.hero-main-btn:hover span{transform:translateX(4px)}
+.hero-ghost-btn{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);box-shadow:none;color:#fff}.hero-ghost-btn:hover{background:rgba(255,255,255,.16);box-shadow:none}
+.hero-trust{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;font-size:11px;font-weight:800;color:#aeeaff}.hero-trust span{padding:7px 10px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(255,255,255,.055)}
+.hero-visual{position:relative;overflow:hidden;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,rgba(74,221,255,.16),transparent 32%),linear-gradient(150deg,rgba(3,25,44,.85),rgba(8,87,124,.64));min-height:500px}
+.hero-visual:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;border:1px solid rgba(147,240,255,.11);box-shadow:0 0 0 35px rgba(64,206,255,.025),0 0 0 80px rgba(64,206,255,.018);animation:orbitalPulse 5s ease-in-out infinite}
+.hero-visual:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,transparent,black 20%,black 80%,transparent)}
+@keyframes orbitalPulse{50%{transform:scale(1.06);opacity:.7}}
+.orbital-card{position:relative;width:270px;height:270px;border-radius:50%;display:grid;place-items:center;z-index:3;background:radial-gradient(circle at 35% 30%,rgba(61,215,255,.18),rgba(255,255,255,.045) 45%,rgba(255,255,255,.02) 70%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px rgba(255,255,255,.16),0 30px 70px rgba(0,0,0,.18)}
+.orbit-ring{position:absolute;inset:18px;border-radius:50%;border:1px dashed rgba(151,238,255,.30);animation:orbitSpin 16s linear infinite}.orbit-ring:before,.orbit-ring:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#65e9ff;box-shadow:0 0 20px #65e9ff}.orbit-ring:before{left:5%;top:17%}.orbit-ring:after{right:9%;bottom:14%;background:#9aa6ff;box-shadow:0 0 20px #9aa6ff}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+.orbital-center{display:flex;flex-direction:column;align-items:center;line-height:1}.orbital-center span{font-size:10px;letter-spacing:.22em;color:#8eeeff;font-weight:900}.orbital-center b{font-size:56px;letter-spacing:-.07em;color:#fff;text-shadow:0 8px 30px rgba(71,216,255,.2)}.orbital-center small{font-size:12px;color:#9bc4d7;margin-top:7px}
+.orbit-chip{position:absolute;z-index:4;padding:8px 11px;border-radius:999px;font-size:10px;font-weight:950;color:#d9fbff;border:1px solid rgba(255,255,255,.16);background:rgba(8,27,44,.72);backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.18);animation:chipFloat 4s ease-in-out infinite}.chip-a{left:13%;top:22%}.chip-b{right:10%;top:30%;animation-delay:1s}.chip-c{left:22%;bottom:19%;animation-delay:2s}
+@keyframes chipFloat{50%{transform:translateY(-7px)}}
+.floating-card{position:absolute;z-index:5;display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:14px;background:rgba(6,28,45,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(15px);box-shadow:0 18px 40px rgba(0,0,0,.18);color:#fff;animation:floatCard 5s ease-in-out infinite}.floating-card>span{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,#22b3ff,#766fff);box-shadow:0 8px 18px rgba(22,119,255,.24)}.floating-card b{display:block;font-size:11px}.floating-card small{display:block;color:#94b7ca;font-size:10px;margin-top:3px}.float-one{right:7%;top:16%}.float-two{left:5%;bottom:12%;animation-delay:1.5s}@keyframes floatCard{50%{transform:translateY(-8px) rotate(.4deg)}}
+.setup-shell{display:flex;flex-direction:column;gap:16px}.setup-head{display:flex;justify-content:space-between;align-items:center;padding:8px 5px 3px}.setup-head h2{font-size:clamp(27px,4vw,40px)!important;margin:0 0 8px!important}.setup-sub{margin:0;color:#6d8195;max-width:830px;line-height:1.65}.setup-sub b{color:#166fdc}.setup-orbit{width:110px;height:110px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;position:relative;background:radial-gradient(circle,#fff,#edf6ff);border:1px solid #d8e7f7;box-shadow:0 15px 40px rgba(22,119,255,.10)}.setup-orbit:before{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid transparent;border-top-color:#2ac5ff;border-right-color:#5c7bff;animation:orbitSpin 6s linear infinite}.setup-orbit:after{content:"";position:absolute;inset:8px;border:1px dashed #d0e1f0;border-radius:50%}.setup-orbit span{display:none}.setup-orbit b{font-size:22px;color:#0d63c4;letter-spacing:-.04em}.setup-orbit small{font-size:9px;letter-spacing:.14em;color:#8095a8;font-weight:900}
+.setup-grid{display:grid;grid-template-columns:1.15fr .85fr .85fr;gap:14px}.field-card{display:flex;align-items:flex-start;gap:12px;padding:16px;border:1px solid #e2ebf4;border-radius:17px;background:rgba(255,255,255,.78);box-shadow:0 10px 30px rgba(23,62,95,.05);transition:transform .18s,box-shadow .18s,border-color .18s}.field-card:hover{transform:translateY(-2px);box-shadow:0 15px 36px rgba(23,62,95,.09);border-color:#c9def3}.field-card.compact{padding:14px}.field-icon{width:40px;height:40px;flex:0 0 40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#edf7ff,#e9f0ff);color:#176bd1;font-size:18px;border:1px solid #d9e8fa}.field-copy{min-width:0;width:100%}.field-copy label{display:block;font-size:12px;font-weight:950;color:#223b54;margin-bottom:4px}.field-hint{display:block;color:#8295a8;font-size:10px;line-height:1.4;margin-bottom:10px}.field-card .select{margin:0}
+.session-builder{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:14px}.builder-main,.builder-side{border:1px solid #e1eaf3;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(248,252,255,.9));box-shadow:var(--shadow-premium)}.builder-main{padding:20px}.builder-side{padding:12px;display:flex;flex-direction:column;gap:12px}.builder-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.builder-top h3{margin:0;font-size:21px}.available-pill{display:flex;gap:7px;align-items:center;padding:8px 10px;border-radius:999px;background:#eef8f3;border:1px solid #d4eee0;color:#187447;font-size:11px}.live-dot{width:7px;height:7px;border-radius:50%;background:#1ab775;box-shadow:0 0 0 4px rgba(26,183,117,.10);animation:pulseDot 2s infinite}.count-line{display:flex;gap:10px;align-items:center;margin-top:18px}.count-input-wrap{position:relative;display:flex;align-items:center;max-width:260px}.count-input{width:190px;height:76px;padding:0 48px 0 18px;border-radius:18px;border:2px solid #dce8f4;background:#fff;font-size:40px;font-weight:950;letter-spacing:-.06em;color:#0d3560;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 12px 30px rgba(13,53,96,.07);transition:border-color .18s,box-shadow .18s,transform .18s}.count-input:focus{border-color:#7dbbff;box-shadow:0 0 0 5px rgba(22,119,255,.09),0 12px 30px rgba(13,53,96,.09);transform:translateY(-1px)}.count-input-wrap span{position:absolute;right:16px;font-weight:950;color:#7d90a3}.max-btn{height:76px;padding:0 18px;border-radius:18px;border:1px solid #cae5fb;background:linear-gradient(135deg,#eef8ff,#f0f3ff);color:#0d67c3;font-weight:950;cursor:pointer;transition:transform .18s,box-shadow .18s}.max-btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(22,119,255,.10)}.count-presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.count-preset{border:1px solid #dfe8f0;background:#fff;color:#566d84;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:900;cursor:pointer;transition:.18s}.count-preset:hover,.count-preset.active{background:#eaf4ff;border-color:#aad1fb;color:#1265c2;box-shadow:0 5px 14px rgba(22,119,255,.08)}.count-scale{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;margin-top:15px;color:#92a3b3;font-size:10px}.count-scale>div{height:6px;background:#edf2f7;border-radius:999px;overflow:hidden}.count-scale i{display:block;height:100%;width:0;background:linear-gradient(90deg,#32baf3,#1677ff);border-radius:999px;box-shadow:0 0 14px rgba(22,119,255,.25);transition:width .25s ease}
+.session-preview{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:18px;border:1px solid #dbe9f5;background:linear-gradient(100deg,#f3fbff,#f3f4ff);box-shadow:0 10px 30px rgba(20,67,110,.05)}.preview-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#1aa9ea,#5d79ff);color:#fff;box-shadow:0 10px 20px rgba(22,119,255,.20)}.preview-copy{flex:1;min-width:0}.preview-copy b{display:block;font-size:13px;color:#163650}.preview-copy span{display:block;font-size:11px;color:#72879b;margin-top:3px}.preview-actions{display:flex;gap:7px;flex-wrap:wrap}.mode-chip,.time-chip{font-size:10px;font-weight:900;padding:7px 9px;border-radius:999px;background:#fff;border:1px solid #dde8f1;color:#536b82}.tips-card{margin-top:0!important;color:#566c80;line-height:1.8}.tips-card .sep{opacity:.4;margin:0 5px}.start-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.start-btn{min-width:230px;justify-content:center;display:flex;align-items:center;gap:16px;height:52px;font-size:14px}.start-btn .arrow{font-size:20px;transition:transform .2s}.start-btn:hover .arrow{transform:translateX(5px)}.start-meta{display:flex;gap:8px;color:#8799aa;font-size:11px}.setup-shell .warning{margin-top:0}
+.session-builder .builder-side .field-card{background:#fff}
+.qbox{box-shadow:0 14px 40px rgba(16,46,78,.06)}
+.examtop .row:first-child{position:relative}.examtop .row:first-child:after{content:"";width:6px;height:6px;border-radius:50%;background:#36c693;box-shadow:0 0 0 5px rgba(54,198,147,.10);position:absolute;left:0;bottom:-20px}.qnav{grid-template-columns:repeat(16,minmax(0,1fr));max-height:215px}.qnum{font-size:10px;min-height:31px}
+@media (max-width:1100px){.hero-grid{grid-template-columns:1fr}.hero-visual{min-height:420px}.setup-grid{grid-template-columns:1fr 1fr}.field-wide{grid-column:1/-1}.session-builder{grid-template-columns:1fr}.builder-side{display:grid;grid-template-columns:1fr 1fr}.qnav{grid-template-columns:repeat(12,minmax(0,1fr))}}
+@media (max-width:700px){.hero-grid{display:flex;flex-direction:column}.hero-copy{padding:34px 22px}.hero-copy h1{font-size:36px!important}.hero-visual{min-height:370px}.orbital-card{width:220px;height:220px}.orbital-center b{font-size:42px}.float-one{right:2%;top:10%}.float-two{left:2%;bottom:8%}.setup-head{align-items:flex-start}.setup-orbit{width:84px;height:84px;flex:0 0 84px}.setup-orbit b{font-size:16px}.setup-grid{grid-template-columns:1fr}.field-wide{grid-column:auto}.builder-side{display:flex}.count-line{align-items:stretch}.count-input-wrap{max-width:none;flex:1}.count-input{width:100%;height:66px;font-size:32px}.max-btn{height:66px}.session-preview{align-items:flex-start}.preview-actions{width:100%}.start-row{align-items:flex-start}.start-btn{width:100%}.start-meta{width:100%;justify-content:center;flex-wrap:wrap}.qnav{grid-template-columns:repeat(8,minmax(0,1fr))}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}}
+
 </style></head>
 <body>
-<header class="top"><div class="brand">FOR YOU MY LOVE <span> katia ninou ❤😍</span> · 1360 QCM/QCS · 320 cas cliniques complets · AUDIT</div><div class="row"><span class="pill" id="mode">Accueil</span><span class="pill" id="topTimer">—</span></div></header>
+<header class="top"><div class="brand"> FOR YOU MY LOVE <span>katia ninou ❤😍</span> · 1360 QCM/QCS · 340 cas cliniques · VERSION PREMIUM</div><div class="row"><span class="pill" id="mode">Accueil</span><span class="pill" id="topTimer">—</span></div></header>
 <div class="layout"><aside>
 <button class="active" data-v="home">🏠 Tableau de bord</button>
 <button data-v="courses">📚 Cours</button>
@@ -198,32 +318,55 @@ img,video,iframe{max-width:100%}
 </aside><main>
 
 <section id="home" class="view active">
-<div class="card hero"><h1>Ta plateforme de préparation au résidanat</h1><p>10 cours · 80 questions par cours · QCS/QCM · cas cliniques · difficulté réglable · entraînement avec réponses · concours chronométré.</p><button class="btn" onclick="show('setup')">Commencer</button></div>
+<div class="card hero hero-premium"><div class="hero-grid"><div class="hero-copy"><span class="eyebrow">RÉVISION · CONCOURS · CLINIQUE</span><h1>Ton espace de préparation au résidanat, pensé comme un vrai produit premium.</h1><p>Construis des sessions de <b>10 à 1 360 questions</b>, entraîne-toi par cours, passe en mode concours et travaille tes 340 cas cliniques dans une interface fluide et immersive.</p><div class="hero-actions"><button class="btn hero-main-btn" onclick="show('setup')">Configurer une session <span>→</span></button><button class="btn hero-ghost-btn" onclick="show('cases')">Explorer les cas cliniques</button></div><div class="hero-trust"><span>✓ 17 cours</span><span>✓ 1 360 QCM/QCS</span><span>✓ 340 cas cliniques</span></div></div><div class="hero-visual"><div class="hero-glow"></div><div class="orbital-card orbital-main"><div class="orbit-ring"></div><div class="orbital-center"><span>MAX</span><b>1 360</b><small>questions</small></div><div class="orbit-chip chip-a">QCM</div><div class="orbit-chip chip-b">QCS</div><div class="orbit-chip chip-c">CAS</div></div><div class="floating-card float-one"><span>⚡</span><div><b>Mode concours</b><small>Correction à la fin</small></div></div><div class="floating-card float-two"><span>◈</span><div><b>Progression</b><small>Suivi par chapitre</small></div></div></div></div></div>
 <div class="grid g4" style="margin-top:15px">
-<div class="card"><div class="mini">Cours</div><div class="stat">10</div></div><div class="card"><div class="mini">Questions</div><div class="stat">800</div></div><div class="card"><div class="mini">Sessions</div><div class="stat" id="sessions">0</div></div><div class="card"><div class="mini">Dernière note</div><div class="stat" id="last">—</div></div>
+<div class="card"><div class="mini">Cours disponibles</div><div class="stat">17</div></div><div class="card"><div class="mini">Questions</div><div class="stat">1 360</div></div><div class="card"><div class="mini">Sessions</div><div class="stat" id="sessions">0</div></div><div class="card"><div class="mini">Dernière note</div><div class="stat" id="last">—</div></div>
 </div>
 <div class="card" style="margin-top:15px"><h2>Banques</h2><div id="homeCourses"></div></div>
 </section>
 
-<section id="courses" class="view"><div class="card"><h2>Les 10 cours</h2><div id="courseList"></div></div></section>
+<section id="courses" class="view"><div class="card"><h2>Les 17 cours</h2><div id="courseList"></div></div></section>
 
 <section id="cases" class="view"><div class="card"><h2>🩺 Cas cliniques</h2><p class="mini">Choisis un cours pour parcourir ses <b>20 cas cliniques complets</b>. Chaque cas présente une histoire clinique, examen, examens complémentaires, diagnostic, prise en charge et évolution, puis des questions de raisonnement.</p><div id="caseList"></div></div></section>
 <section id="caseDetail" class="view"><div class="card"><div class="row between"><div><h2 id="caseTitle"></h2><div class="mini" id="caseCourse"></div><div class="mini" id="caseProgress" style="margin-top:5px"></div></div><button class="btn light" onclick="show('cases')">← Retour aux cours</button></div><div class="caseScenario" id="caseScenario"></div><div id="caseQuestions"></div><div class="row between" style="margin-top:20px"><button class="btn light" id="casePrev" onclick="moveCase(-1)">← Précédent</button><button class="btn" id="caseNext" onclick="moveCase(1)">Suivant →</button></div></div></section>
 
-<section id="setup" class="view"><div class="card"><h2>Configurer une session</h2>
-<div class="grid g3">
-<div><label class="mini">Cours</label><select class="select" id="scope"></select></div>
-<div><label class="mini">Difficulté</label><select class="select" id="difficulty"><option value="all">Toutes</option><option value="E">Facile</option><option value="M">Moyenne</option><option value="D">Difficile</option></select></div>
-<div><label class="mini">Mode</label><select class="select" id="modeSelect"><option value="train">Entraînement — réponse à la demande</option><option value="exam">Examen — correction à la fin</option></select></div>
-</div>
-<div class="grid g3" style="margin-top:15px">
-<div><label class="mini">Nombre de questions</label><select class="select" id="count"><option>80</option><option>60</option><option>50</option><option>40</option><option>30</option><option>20</option><option>10</option></select></div>
-<div><label class="mini">Durée</label><select class="select" id="duration"><option value="60">60 min</option><option value="45">45 min</option><option value="30">30 min</option><option value="20">20 min</option><option value="10">10 min</option></select></div>
-<div><label class="mini">Ordre</label><select class="select" id="random"><option value="yes">Aléatoire</option><option value="no">Ordre du cours</option></select></div>
-</div>
-<div class="course" style="margin-top:15px"><b>💡 Entraînement :</b> tu réponds puis tu peux cliquer sur <b>Voir la réponse</b> quand tu veux. <br><b>🎓 Examen :</b> aucune réponse/correction avant la remise de la copie.</div>
-<div id="sourceWarning" class="warning" style="display:none"></div>
-<button class="btn" onclick="start()">Démarrer la session</button></div></section>
+<section id="setup" class="view">
+<div class="setup-shell">
+  <div class="setup-head">
+    <div>
+      <span class="eyebrow">CONFIGURATION DU CONCOURS</span>
+      <h2>Construis ta session sur mesure</h2>
+      <p class="setup-sub">De 10 questions à <b id="maxCountLabel">1 360</b> questions : la limite s’adapte automatiquement au stock réellement disponible et à tes filtres.</p>
+    </div>
+    <div class="setup-orbit"><span></span><b id="setupMaxRing">1 360</b><small>MAX</small></div>
+  </div>
+  <div class="setup-grid">
+    <div class="field-card field-wide"><div class="field-icon">📚</div><div class="field-copy"><label>Cours</label><span class="field-hint">Choisis toute la banque ou un cours ciblé</span><select class="select" id="scope"></select></div></div>
+    <div class="field-card"><div class="field-icon">◈</div><div class="field-copy"><label>Difficulté</label><span class="field-hint">Filtre la banque avant de calculer le maximum</span><select class="select" id="difficulty"><option value="all">Toutes</option><option value="E">Facile</option><option value="M">Moyenne</option><option value="D">Difficile</option></select></div></div>
+    <div class="field-card"><div class="field-icon">🎯</div><div class="field-copy"><label>Mode</label><span class="field-hint">Entraînement ou conditions concours</span><select class="select" id="modeSelect"><option value="train">Entraînement — correction à la demande</option><option value="exam">Examen — correction à la fin</option></select></div></div>
+  </div>
+  <div class="session-builder">
+    <div class="builder-main">
+      <div class="builder-top"><div><span class="eyebrow muted-eyebrow">TAILLE DE SESSION</span><h3>Nombre de questions</h3></div><div class="available-pill"><span class="live-dot"></span><b id="availableCount">1 360</b> disponibles</div></div>
+      <div class="count-line">
+        <div class="count-input-wrap"><input id="count" class="count-input" type="number" min="1" max="1360" value="80" inputmode="numeric"><span>Q</span></div>
+        <button class="max-btn" id="maxBtn" type="button" onclick="setMaxCount()">MAX · <span id="maxBtnValue">1 360</span></button>
+      </div>
+      <div class="count-presets" id="countPresets"></div>
+      <div class="count-scale"><span>1</span><div><i id="countScaleFill"></i></div><span id="countScaleMax">1 360</span></div>
+    </div>
+    <div class="builder-side">
+      <div class="field-card compact"><div class="field-icon">⏱</div><div class="field-copy"><label>Durée</label><span class="field-hint">Adapte le temps aux grandes sessions</span><select class="select" id="duration"><option value="60">60 min</option><option value="90">90 min</option><option value="120">120 min</option><option value="180">180 min</option><option value="240">240 min</option><option value="360">360 min</option><option value="480">480 min</option><option value="600">600 min</option><option value="720">720 min</option><option value="960">960 min</option><option value="1200">1 200 min</option></select></div></div>
+      <div class="field-card compact"><div class="field-icon">⤨</div><div class="field-copy"><label>Ordre</label><span class="field-hint">Mélange la banque ou garde l’ordre du cours</span><select class="select" id="random"><option value="yes">Aléatoire</option><option value="no">Ordre du cours</option></select></div></div>
+    </div>
+  </div>
+  <div class="session-preview">
+    <div class="preview-icon">⚡</div><div class="preview-copy"><b id="previewTitle">Session 80 questions</b><span id="previewText">Toutes les questions seront tirées selon tes filtres.</span></div><div class="preview-actions"><span id="previewMode" class="mode-chip">Entraînement</span><span id="previewTime" class="time-chip">60 min</span></div>
+  </div>
+  <div class="course tips-card"><b>💡 Entraînement :</b> réponse + correction à la demande. <b>🎓 Examen :</b> aucune correction avant la remise de la copie. <span class="sep">·</span> Les questions sont tirées uniquement du stock disponible.</div>
+  <div id="sourceWarning" class="warning" style="display:none"></div>
+  <div class="start-row"><button class="btn start-btn" onclick="start()"><span>Lancer la session</span><span class="arrow">→</span></button><div class="start-meta"><span>⌘ Session personnalisée</span><span>•</span><span id="startMetaMax">jusqu’à 1 360 Q</span></div></div>
+</div></section>
 
 <section id="exam" class="view"><div class="examtop">
 <div class="row between"><div><b id="title"></b><div class="mini" id="counter"></div></div><div class="timer" id="timer">—</div><button class="btn red" onclick="finish(false)">Terminer</button></div>
@@ -245,15 +388,50 @@ const CASES=[{"id":"case-8215-01","course":"Anatomie de la rate et système port
 const labels={E:"Facile",M:"Moyenne",D:"Difficile"};
 let bank=[],exam=[],idx=0,deadline=0,startTime=0,timerId=null,revealed=false;
 function $(id){return document.getElementById(id)}
-function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));$(id).classList.add('active');document.querySelectorAll('aside button').forEach(b=>b.classList.toggle('active',b.dataset.v===id));$('mode').textContent={home:"Accueil",courses:"Cours",setup:"Configuration",exam:"Session",result:"Résultat",history:"Historique",stats:"Statistiques",cases:"Cas cliniques",caseDetail:"Cas clinique"}[id]||id;if(id==="history")renderHistory();if(id==="stats")renderStats();scrollTo({top:0,behavior:"smooth"})}
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));$(id).classList.add('active');document.querySelectorAll('aside button').forEach(b=>b.classList.toggle('active',b.dataset.v===id));$('mode').textContent={home:"Accueil",courses:"Cours",setup:"Configuration",exam:"Session",result:"Résultat",history:"Historique",stats:"Statistiques",cases:"Cas cliniques",caseDetail:"Cas clinique"}[id]||id;document.body.classList.toggle('focus-mode',id==="exam");if(id==="history")renderHistory();if(id==="stats")renderStats();if(id==="setup")updateSessionConfig();scrollTo({top:0,behavior:"smooth"})}
 document.querySelectorAll('aside button').forEach(b=>b.onclick=()=>show(b.dataset.v));
 function flatten(){let a=[];COURSES.forEach(c=>c.questions.forEach((q,i)=>a.push({...q,course:c.id,courseTitle:c.title,number:i+1})));return a}
 bank=flatten();
 function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function filteredBank(){
+ const scope=$('scope').value, d=$('difficulty').value;
+ return bank.filter(q=>(scope==="all"||q.course===scope)&&(d==="all"||q.difficulty===d));
+}
+function fmtNum(n){return Number(n||0).toLocaleString('fr-FR')}
+function updateCountPresets(max){
+ const raw=[10,20,40,60,80,100,120,160,200,300,400,500,800,1000,1200,1360];
+ const values=[...new Set(raw.filter(x=>x<=max))];
+ if(max>80 && !values.includes(max))values.push(max);
+ values.sort((a,b)=>a-b);
+ $('countPresets').innerHTML=values.map(v=>`<button type="button" class="count-preset ${+$('count').value===v?'active':''}" onclick="setCount(${v})">${fmtNum(v)}</button>`).join('');
+}
+function setCount(n){const max=filteredBank().length;const v=Math.max(1,Math.min(max,Number(n)||1));$('count').value=v;updateSessionPreview()}
+function setMaxCount(){setCount(filteredBank().length)}
+function updateSessionPreview(){
+ const max=filteredBank().length;
+ let n=Math.max(1,Math.min(max,Number($('count').value)||1));$('count').value=n;
+ const scopeText=$('scope').selectedOptions[0]?.textContent||'Tous les cours';
+ const mode=$('modeSelect').value==='exam'?'Examen':'Entraînement';
+ $('availableCount').textContent=fmtNum(max);$('maxCountLabel').textContent=fmtNum(max);$('setupMaxRing').textContent=fmtNum(max);$('maxBtnValue').textContent=fmtNum(max);$('countScaleMax').textContent=fmtNum(max);$('startMetaMax').textContent=`jusqu’à ${fmtNum(max)} Q`;
+ $('count').max=max;
+ $('countScaleFill').style.width=(n/max*100).toFixed(2)+'%';
+ $('previewTitle').textContent=`Session ${fmtNum(n)} question${n>1?'s':''}`;
+ $('previewText').textContent=`${scopeText.split(' — ')[0]} · ${fmtNum(max)} questions correspondent actuellement à tes filtres.`;
+ $('previewMode').textContent=mode;
+ $('previewTime').textContent=`${$('duration').selectedOptions[0]?.textContent||'60 min'}`;
+ document.querySelectorAll('.count-preset').forEach(b=>b.classList.toggle('active',Number(b.textContent.replace(/\s/g,''))===n));
+ updateCountPresets(max);
+}
+function updateSessionConfig(){
+ const max=filteredBank().length||0;
+ if(!$('count').value || +$('count').value>max)$('count').value=Math.min(max||1,80);
+ updateSessionPreview();
+}
 function start(){
- let scope=$('scope').value,d=$('difficulty').value,arr=bank.filter(q=>(scope==="all"||q.course===scope)&&(d==="all"||q.difficulty===d));
+ let arr=filteredBank();
  if(!arr.length){alert("Aucune question ne correspond à ces filtres.");return}
- if($('random').value==="yes")arr=shuffle(arr);let n=Math.min(+$('count').value,arr.length);
+ if($('random').value==="yes")arr=shuffle(arr);
+ let n=Math.max(1,Math.min(+$('count').value||1,arr.length));
  exam=arr.slice(0,n).map(q=>({...q,ans:[],revealed:false}));idx=0;startTime=Date.now();deadline=startTime+(+$('duration').value)*60000;
  show("exam");renderQuestion();clearInterval(timerId);timerId=setInterval(tick,250);tick();
 }
@@ -289,7 +467,7 @@ function renderCases(){
   const groups={};
   CASES.forEach(c=>(groups[c.course]??=[]).push(c));
   const ordered=COURSES.map(c=>c.title).filter(t=>groups[t]);
-  $("caseList").innerHTML=`<div class="course" style="margin-bottom:16px"><b>320 cas cliniques</b><div class="mini">10 cours · 20 cas par cours · 2 questions par cas · correction à la demande</div></div>`+ordered.map((name,i)=>`<div class="course"><div><h3>${i+1}. ${name}</h3><div class="mini"><b>${groups[name].length} cas cliniques</b> · ${groups[name].length*2} questions</div></div><button class="btn case-course-btn" data-course-index="${i}">Parcourir les cas →</button></div>`).join("");
+  $("caseList").innerHTML=`<div class="course" style="margin-bottom:16px"><b>340 cas cliniques</b><div class="mini">17 cours · 20 cas par cours · questions de raisonnement · correction à la demande</div></div>`+ordered.map((name,i)=>`<div class="course"><div><h3>${i+1}. ${name}</h3><div class="mini"><b>${groups[name].length} cas cliniques</b> · ${groups[name].length*2} questions</div></div><button class="btn case-course-btn" data-course-index="${i}">Parcourir les cas →</button></div>`).join("");
   document.querySelectorAll(".case-course-btn").forEach(btn=>{
     btn.addEventListener("click",()=>openCourseCases(ordered[Number(btn.dataset.courseIndex)]));
   });
@@ -328,13 +506,21 @@ function openCase(id){
 }
 function revealCase(id,i){let c=CASES.find(x=>x.id===id),q=c.questions[i];let a=q.answers.join(", ");let txt=q.answers.map(x=>x+". "+q.options[x.charCodeAt(0)-65]).join("<br>");$("caseAns"+i).innerHTML=`<div class="answer"><strong>Réponse : ${a}</strong><br>${txt}<br><span class="mini">Correction construite à partir du support du cours indiqué.</span></div>`}
 function renderCourses(){
-/* AUDIT: le support Présentation.pptx fourni ne contient qu'une diapositive de titre; les 80 questions de cette banque restent non certifiables tant que le cours complet n'est pas fourni. */$("courseList").innerHTML=COURSES.map(c=>`<div class="course"><div><h3>${c.title}</h3><div class="mini">${c.specialty} · <b>80 questions</b></div>${c.id==="lithiase-cholecystite"?'<div class="warning">Le fichier fourni contient uniquement le titre; cette banque contient donc des questions complémentaires générales en attendant le cours complet.</div>':""}</div><button class="btn" onclick="quick('${c.id}')">S’entraîner</button></div>`).join("")}
+/* AUDIT: le support Présentation.pptx fourni ne contient qu'une diapositive de titre; les 80 questions de cette banque restent non certifiables tant que le cours complet n'est pas fourni. */$("courseList").innerHTML=COURSES.map(c=>`<div class="course"><div><h3>${c.title}</h3><div class="mini">${c.specialty} · <b>${c.questions.length} questions</b></div>${c.id==="lithiase-cholecystite"?'<div class="warning">Le fichier fourni contient uniquement le titre; cette banque contient donc des questions complémentaires générales en attendant le cours complet.</div>':""}</div><button class="btn" onclick="quick('${c.id}')">S’entraîner</button></div>`).join("")}
 function quick(id){$("scope").value=id;$("difficulty").value="all";$("count").value="80";$("modeSelect").value="train";show("setup")}
 function renderHistory(){let h=JSON.parse(localStorage.getItem("rp560")||"[]");$("hist").innerHTML=h.length?`<table><tr><th>Date</th><th>Score</th><th>Note</th><th>Temps</th></tr>${h.map(x=>`<tr><td>${x.date}</td><td>${x.raw}/${x.total}</td><td><b>${x.note}/20</b></td><td>${fmt(x.used)}</td></tr>`).join("")}</table>`:'<div class="empty">Aucune session.</div>'}
 function renderStats(){let h=JSON.parse(localStorage.getItem("rp560")||"[]");if(!h.length){$("statsBox").innerHTML='<div class="empty">Aucune donnée.</div>';return}let avg=h.reduce((a,x)=>a+x.note,0)/h.length,by={};h.forEach(x=>x.courses.forEach(c=>{by[c.name]??={ok:0,total:0};by[c.name].ok+=c.ok;by[c.name].total+=c.total}));$("statsBox").innerHTML=`<div class="grid g3"><div class="course"><b>Sessions</b><div class="stat">${h.length}</div></div><div class="course"><b>Moyenne</b><div class="stat">${avg.toFixed(2)}/20</div></div><div class="course"><b>Meilleure note</b><div class="stat">${Math.max(...h.map(x=>x.note)).toFixed(2)}/20</div></div></div><h3>Maîtrise par cours</h3>`+Object.entries(by).map(([n,v])=>{let p=Math.round(v.ok/v.total*100);return `<div style="margin:14px 0"><div class="row between"><b>${n}</b><span>${p}%</span></div><div class="bar"><i style="width:${p}%"></i></div></div>`}).join("")}
 function clearHistory(){if(confirm("Effacer l’historique ?")){localStorage.removeItem("rp560");updateHome();renderHistory();renderStats()}}
-function updateHome(){let h=JSON.parse(localStorage.getItem("rp560")||"[]");$("sessions").textContent=h.length;$("last").textContent=h[0]?h[0].note+"/20":"—";$("homeCourses").innerHTML=COURSES.map(c=>`<div style="margin:14px 0"><div class="row between"><b>${c.title}</b><span>80 Q</span></div><div class="bar"><i style="width:100%"></i></div></div>`).join("")}
-$("scope").innerHTML='<option value="all">Tous les cours — 800 questions</option>'+COURSES.map(c=>`<option value="${c.id}">${c.title} — 80 Q</option>`).join("");
-renderCourses();renderCases();updateHome();
-$("scope").onchange=()=>{$("sourceWarning").style.display=$("scope").value==="lithiase-cholecystite"?"block":"none";$("sourceWarning").textContent="Attention : le fichier « Présentation.pptx » fourni contient uniquement une diapositive de titre. Les 80 QCM de cette banque sont donc complémentaires/généraux et devront être remplacés ou validés avec le cours complet."};
+function updateHome(){let h=JSON.parse(localStorage.getItem("rp560")||"[]");$("sessions").textContent=h.length;$("last").textContent=h[0]?h[0].note+"/20":"—";$('homeCourses').innerHTML=COURSES.map(c=>{let n=c.questions.length;return `<div style="margin:14px 0"><div class="row between"><b>${c.title}</b><span>${fmtNum(n)} Q</span></div><div class="bar"><i style="width:100%"></i></div></div>`}).join("")}
+$("scope").innerHTML='<option value="all">Tous les cours — '+fmtNum(bank.length)+' questions</option>'+COURSES.map(c=>`<option value="${c.id}">${c.title} — ${fmtNum(c.questions.length)} Q</option>`).join("");
+renderCourses();renderCases();updateHome();updateSessionConfig();
+$("scope").onchange=()=>{
+  $("sourceWarning").style.display=$("scope").value==="lithiase-cholecystite"?"block":"none";
+  $("sourceWarning").textContent="Attention : le fichier « Présentation.pptx » fourni contient uniquement une diapositive de titre. Les questions de cette banque sont donc complémentaires/générales en attendant le cours complet.";
+  updateSessionConfig();
+};
+$("difficulty").onchange=updateSessionConfig;
+$("count").addEventListener('input',updateSessionPreview);
+$("modeSelect").onchange=updateSessionPreview;
+$("duration").onchange=updateSessionPreview;
 </script></body></html>
