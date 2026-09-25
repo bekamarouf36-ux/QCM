@@ -386,6 +386,8 @@ body:after{content:"";position:fixed;inset:-20%;pointer-events:none;z-index:-2;b
 <div class="card">
 <h2>🤖 Importer un cours et générer des QCM/QCS avec l'IA</h2>
 <p class="mini">Cette fonctionnalité fonctionne <b>entièrement dans ton navigateur</b>, sans serveur. Elle appelle directement l'API du fournisseur choisi avec ta propre clé API. Cette clé n'est envoyée qu'à ce fournisseur (jamais ailleurs) et reste stockée uniquement dans ce navigateur (localStorage).</p>
+<div class="warning">⚠️ Une clé API stockée dans un site web statique reste visible dans le code du navigateur (onglet réseau/DevTools). N'utilise cette fonctionnalité que sur un appareil personnel et ne partage jamais ce fichier avec ta clé déjà renseignée.</div>
+<div class="mini" style="margin-top:8px">ℹ️ Précision technique : ta clé n'est <b>jamais écrite dans ce fichier HTML</b> — elle est gardée uniquement dans le stockage local de ton navigateur (localStorage), et légèrement brouillée avant d'y être enregistrée. Elle reste en revanche visible dans l'onglet <b>Réseau</b> des outils développeur au moment de l'appel, car elle doit être envoyée à Google/Anthropic pour authentifier la requête — c'est inhérent à tout appel direct depuis un navigateur, sans serveur intermédiaire.</div>
 
 <h3 style="margin-top:22px">1. Fournisseur & clé API</h3>
 <div class="grid g4" style="margin-top:8px">
